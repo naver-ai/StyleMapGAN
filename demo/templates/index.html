@@ -1,0 +1,83 @@
+<!-- 
+    Refer to https://github.com/quolc/neural-collage/blob/master/templates/demo_feature_blending/index.html
+ -->
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container" style="max-width: 1900px">
+    <div class="row justify-content-md-center">
+        <div class="col-md-10" id="main-column">
+            <!-- title -->
+            <div class="row" id="title">
+                <h2>
+                    Demo: StyleMapGAN (CVPR21)
+                </h2>
+            </div>
+
+            <div class="row" id="title">
+                <h4>
+                    Exploiting Spatial Dimensions of Latent in GAN for Real-time Image Editing
+                </h4>
+            </div>
+
+
+            <!-- main UI -->
+            <div class="row justify-content-md-center" id="main-ui">
+                <div class="col-md-3">
+                    <p> Reference Images / Canvas Draw</p>
+                    <div id="p5-reference-wrapper" class="p5-wrapper">
+                        <div id="p5-reference" class="p5"></div>
+                    </div>
+                    <div id="sketch-control" class="row">
+                        <button class="btn btn-danger" id="sketch-clear" disabled>clear canvas and palette</button>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <p>Original Image / Canvas Move</p>
+                    <div id="p5-original-wrapper" class="p5-wrapper">
+                        <div id="p5-original" class="p5"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-1 my-auto" id="main-ui-middle">
+                    <button type="submit" class="form-control btn btn-danger" id="main-ui-submit" disabled>➞</button>
+                </div>
+
+                <div class="col-md-3">
+                    <p>Generated Result</p>
+                    <div id="p5-right-wrapper" class="p5-wrapper">
+                        <div id="p5-right" class="p5"></div>
+                    </div>
+                    <div id="result-control" class="row">
+                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="15"
+                            data-slider-step="1" data-slider-value="15" />
+                    </div>
+                </div>
+            </div>
+            <!-- palette -->
+            <div class="row justify-content-md-center" id="palette">
+                <div class="col-md-11">
+                    <h4>Selected Reference Images</h4>
+                    <ul class="row" id="palette-body">
+                        <li class="palette-item selected" id="palette-eraser" data-class="-1"
+                            style="background-color: #000;">
+                            <img src="/demo/static/components/img/eraser.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- all class list -->
+            <div class="row justify-content-md-center" id="class-list">
+                <div class="col-md-11">
+                    <h4>Sample Images</h4>
+                    <select class="image-picker show-html form-control col-md-6" id="class-picker">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
