@@ -7,7 +7,7 @@
 > [Hyunsu Kim](https://github.com/blandocs), [Yunjey Choi](https://github.com/yunjey), [Junho Kim](https://github.com/taki0112), [Sungjoo Yoo](http://cmalab.snu.ac.kr), [Youngjung Uh](https://github.com/youngjung)<br>
 > In CVPR 2021.<br>
 
-> Paper: TBD<br>
+> Paper: https://arxiv.org/abs/2104.14754 <br>
 > Video: https://youtu.be/qCapNyRA_Ng <br>
 
 > **Abstract:** *Generative adversarial networks (GANs) synthesize realistic images from random latent vectors. Although manipulating the latent vectors controls the synthesized outputs, editing real images with GANs suffers from i) time-consuming optimization for projecting real images to the latent vectors, ii) or inaccurate embedding through an encoder. We propose StyleMapGAN: the intermediate latent space has spatial dimensions, and a spatially variant modulation replaces AdaIN. It makes the embedding through an encoder more accurate than existing optimization-based methods while maintaining the properties of GANs. Experimental results demonstrate that our method significantly outperforms state-of-the-art models in various image manipulation tasks such as local editing and image interpolation. Last but not least, conventional editing methods on GANs are still valid on our StyleMapGAN. Source code is available at https://github.com/naver-ai/StyleMapGAN.*
