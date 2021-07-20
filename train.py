@@ -292,6 +292,8 @@ def ddp_main(rank, world_size, args):
         e_optim.load_state_dict(ckpt["e_optim"])
         model.module.e_ema.load_state_dict(ckpt["e_ema"])
 
+        del ckpt  # free GPU memory
+
     transform = transforms.Compose(
         [
             transforms.RandomHorizontalFlip(),
