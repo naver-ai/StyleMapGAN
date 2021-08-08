@@ -71,17 +71,21 @@ elif [ $CMD == "create-lmdb-dataset" ]; then
     fi 
 
 elif  [ $CMD == "download-pretrained-network-256" ]; then
+    # 20M-image-trained models
     if [ $DATASET == "celeba_hq" ]; then
         URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/EeNLqY2QJhdIiaLn2eoQWB0B0SsuDpkBlKI-Dd2HxiQ2dg?e=7KXIcE&download=1"
     elif  [ $DATASET == "afhq" ]; then
         URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/EWs_zF9FhNpLq9_qTvMWr98BA0AQEoItdrd2ZO-gD3xuCA?e=1TfZSU&download=1"
-        NETWORK_FOLDER="./expr/checkpoints"
     elif  [ $DATASET == "lsun_car" ]; then
         URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/EYwE8gwJtSdCmzhaenyvl0wBdIevFSUj8XMbo0YPc-J_qg?e=luroy9&download=1"
-        NETWORK_FOLDER="./expr/checkpoints"
     elif  [ $DATASET == "lsun_church" ]; then
         URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/ETflqhQF2h9Dp7yD2pz2-64BFLq1bs5mJK42nRJqqviWig?e=0zNFe8&download=1"
-        NETWORK_FOLDER="./expr/checkpoints"                
+
+    # 5M-image-trained models used in our paper for comparison with other baselines and for ablation studies.
+    elif [ $DATASET == "celeba_hq_5M" ]; then
+        URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/ERjs1Hj0vvJPiQ6d-Yew_qsBi9c-PT-xZygSeO-Nvixeug?e=SzeeJb&download=1"
+    elif  [ $DATASET == "afhq_5M" ]; then
+        URL="https://mysnu-my.sharepoint.com/:u:/g/personal/gustnxodjs_seoul_ac_kr/EebeiMTHbK5Irw1allTdp0oBgpu_m8AXOJPqNYe1m5nJPw?e=xu1TlH&download=1"
     else
         echo "Unknown DATASET"
         exit 1
